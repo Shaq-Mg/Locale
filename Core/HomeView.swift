@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject private var authViewModel: AuthViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            try? authViewModel.signOut()
+        }, label: {
+            Image(systemName: "gear")
+        })
     }
 }
 
 #Preview {
-    HomeView()
+    NavigationStack {
+        HomeView()
+            .environmentObject(AuthViewModel(service: FirebaseService()))
+    }
 }

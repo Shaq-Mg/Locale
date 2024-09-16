@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct RootView: View {
+    @EnvironmentObject private var authViewModel: AuthViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            if authViewModel.isUserCurrrentlyLoggedOut {
+                LoginView()
+            } else {
+                HomeView()
+            }
+        }
     }
 }
 
 #Preview {
-    RootView()
+    NavigationStack {
+        RootView()
+            .environmentObject(AuthViewModel(service: FirebaseService()))
+    }
 }

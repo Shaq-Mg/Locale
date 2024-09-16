@@ -8,11 +8,109 @@
 import SwiftUI
 
 struct MainMessagesView: View {
+    @EnvironmentObject var mainMessagesVM: MainMessagesViewModel
+    @State private var chatUser: ChatUser?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            mainMessagesHeader
+            messagesScrollView
+            
+        }
+        .navigationBarBackButtonHidden(true)
+        .overlay(alignment: .bottomTrailing) {
+            Button("+ New message") {
+                mainMessagesVM.showNewMessageScreen.toggle()
+            }
+            .font(.system(size: 16, weight: .bold))
+            .foregroundStyle(.mint)
+            .padding()
+            .onAppear {
+                mainMessagesVM.service.fetchCurrentUser()
+            }
+            .fullScreenCover(isPresented: $mainMessagesVM.showNewMessageScreen) {
+                CreateNewMessageView(didSelectNewUser: { user in
+                    print(user.email)
+                    self.chatUser = user
+                })
+            }
+        }
     }
 }
 
 #Preview {
-    MainMessagesView()
+    NavigationStack {
+        MainMessagesView()
+            .environmentObject(MainMessagesViewModel(service: FirebaseService()))
+    }
+}
+extension MainMessagesView {
+    
+    private var mainMessagesHeader: some View {
+        HStack(alignment: .center, spacing: 16) {
+            AsyncImage(url: URL(string: mainMessagesVM.chatUser?.profileImageUrl ?? "")) { image in
+                image
+                    .scaledToFill()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+                    .shadow(radius: 4)
+                    .overlay(Circle().stroke(Color(.label), lineWidth: 2))
+            } placeholder: {
+                ProgressView()
+            }
+            
+            VStack(alignment: .leading, spacing: 4) {
+                let email = mainMessagesVM.chatUser?.email.replacingOccurrences(of: "@gmail.com", with: "")
+                Text(email ?? "email")
+                    .font(.system(size: 18, weight: .bold))
+            }
+            Spacer()
+        }
+        .padding(8)
+        .padding(.leading)
+        .background(.ultraThinMaterial)
+    }
+    
+    private var messagesScrollView: some View {
+        ScrollView {
+            ForEach(0..<10, id: \.self) { i in
+                VStack {
+                    NavigationLink {
+                        ChatView(chatUser: chatUser)
+                    } label: {
+                        HStack(spacing: 16) {
+                            AsyncImage(url: URL(string: mainMessagesVM.chatUser?.profileImageUrl ?? "")) { image in
+                                image
+                                    .scaledToFill()
+                                    .frame(width: 34, height: 34)
+                                    .clipShape(Circle())
+                                    .shadow(radius: 4)
+                                    .overlay(Circle().stroke(Color(.label), lineWidth: 2))
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            
+                            VStack(alignment: .leading) {
+                                Text("Username")
+                                    .font(.system(size: 16, weight: .semibold))
+                                
+                                Text("Username")
+                                    .font(.system(size: 14))
+                                    .foregroundStyle(Color(.systemGray))
+                            }
+                            Spacer()
+                            Text("22d")
+                                .font(.system(size: 10))
+                                .foregroundStyle(.secondary)
+                        }
+                        .foregroundStyle(Color(.label))
+                    }
+                    
+                    Divider()
+                        .padding(.vertical, 8)
+                }
+                .padding(.horizontal)
+            }
+        }
+    }
 }
