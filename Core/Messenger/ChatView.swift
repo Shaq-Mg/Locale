@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ChatView: View {
-    @State private var chatText = ""
+    @ObservedObject private var viewModel: ChatViewModel
     let chatUser: ChatUser?
+    
+    init(chatUser: ChatUser?) {
+        self.viewModel = .init(chatUser: chatUser)
+        self.chatUser = chatUser
+    }
     
     var body: some View {
         VStack {
@@ -18,6 +23,25 @@ struct ChatView: View {
             chatBottomBar
         }
         .navigationTitle(chatUser?.email ?? "user")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    
+                } label: {
+                    AsyncImage(url: URL(string: chatUser?.profileImageUrl ?? "")) { image in
+                        image
+                            .scaledToFill()
+                            .frame(width: 32, height: 32)
+                            .clipShape(Circle())
+                            .shadow(radius: 4)
+                            .overlay(Circle().stroke(Color(.label), lineWidth: 2))
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    
+                }
+            }
+        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -54,13 +78,13 @@ extension ChatView {
         HStack {
             Image(systemName: "photo.on.rectangle")
                 .font(.system(size: 20, weight: .semibold))
-            TextField("Send a message...", text: $chatText)
+            TextField("Send a message...", text: $viewModel.chatText)
                 .frame(height: 44)
                 .frame(maxWidth: .infinity)
                 .padding(.leading)
                 .background(RoundedRectangle(cornerRadius: 8).foregroundStyle(.secondary.opacity(0.1)))
             Button {
-                
+                viewModel.handleSend()
             } label: {
                 Image(systemName: "paperplane")
                     .font(.system(size: 20, weight: .semibold))

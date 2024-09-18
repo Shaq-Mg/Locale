@@ -15,7 +15,7 @@ struct RootView: View {
             if authViewModel.isUserCurrrentlyLoggedOut {
                 LoginView()
             } else {
-                HomeView()
+                MainMessagesView()
             }
         }
     }

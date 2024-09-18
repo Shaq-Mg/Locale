@@ -12,6 +12,7 @@
 		460574092C93112A00C99EB0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 460574082C93112A00C99EB0 /* FirebaseFirestore */; };
 		4605740B2C93113900C99EB0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4605740A2C93113900C99EB0 /* FirebaseStorage */; };
 		4605740E2C9313DB00C99EB0 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605740D2C9313DB00C99EB0 /* ChatUser.swift */; };
+		462E6D022C984956004DB1B2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E6D012C984956004DB1B2 /* ChatViewModel.swift */; };
 		4647133D2C94EFEC003FA828 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647133C2C94EFEC003FA828 /* RootView.swift */; };
 		46A40D5D2C88743F0033E6E3 /* LocaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A40D5C2C88743F0033E6E3 /* LocaleApp.swift */; };
 		46A40D612C8874400033E6E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A40D602C8874400033E6E3 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		460574022C9310D300C99EB0 /* MainMessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesViewModel.swift; sourceTree = "<group>"; };
 		4605740D2C9313DB00C99EB0 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		462E6D012C984956004DB1B2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		4647133C2C94EFEC003FA828 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		46A40D592C88743F0033E6E3 /* Locale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A40D5C2C88743F0033E6E3 /* LocaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleApp.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		460574012C930EFD00C99EB0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				462E6D012C984956004DB1B2 /* ChatViewModel.swift */,
 				460574022C9310D300C99EB0 /* MainMessagesViewModel.swift */,
 				46CDF76E2C9755500059E5CC /* NewMessageViewModel.swift */,
 			);
@@ -420,6 +423,7 @@
 				460574032C9310D300C99EB0 /* MainMessagesViewModel.swift in Sources */,
 				46F48D952C947C3D00D45137 /* InputView.swift in Sources */,
 				46F48D932C94684100D45137 /* CreateAccountView.swift in Sources */,
+				462E6D022C984956004DB1B2 /* ChatViewModel.swift in Sources */,
 				4605740E2C9313DB00C99EB0 /* ChatUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
