@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ChatView: View {
     @ObservedObject private var viewModel: ChatViewModel
@@ -53,21 +54,23 @@ struct ChatView: View {
 }
 
 extension ChatView {
+    
+    static let emptyScrollToId = "Empty"
+    
     private var messagesView: some View {
         ScrollView {
-            ForEach(0..<10) { num in
-                HStack {
-                    Spacer()
-                    HStack {
-                        Text("Recent message")
-                            .foregroundStyle(.white)
-                    }
-                    .padding()
-                    .background(Color.mint)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+            ScrollViewReader { scrollViewProxy in
+                ForEach(viewModel.chatMessages) { message in
+                    MessageView(message: message)
                 }
-                .padding(.horizontal)
-                .padding(.top, 8)
+                
+                HStack { Spacer() }
+                    .id(viewModel.emptyScrollToId)
+                    .onReceive(viewModel.$messageCount) { _ in
+                        withAnimation(.easeOut(duration: 0.5)) {
+                            scrollViewProxy.scrollTo(viewModel.emptyScrollToId, anchor: .bottom)
+                        }
+                    }
             }
         }
         .background(Color(.init(white: 0.95, alpha: 1)))
