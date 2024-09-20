@@ -88,7 +88,9 @@ extension ChatView {
                 .padding(.leading)
                 .background(RoundedRectangle(cornerRadius: 8).foregroundStyle(.secondary.opacity(0.1)))
             Button {
-                viewModel.handleSend()
+                if !viewModel.chatText.isEmpty {
+                    viewModel.handleSend()
+                }
             } label: {
                 Image(systemName: "paperplane")
                     .font(.system(size: 20, weight: .semibold))

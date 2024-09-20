@@ -100,7 +100,7 @@ extension MainMessagesView {
                                     .multilineTextAlignment(.leading)
                             }
                             Spacer()
-                            Text("\(recentMessage.timestamp)")
+                            Text(recentMessage.timestamp.description)
                                 .font(.system(size: 10))
                                 .foregroundStyle(.secondary)
                         }

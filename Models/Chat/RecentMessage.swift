@@ -7,21 +7,11 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestore
 
-struct RecentMessage: Identifiable {
+struct RecentMessage: Codable ,Identifiable {
     
-    var id: String { documentId }
-    
-    let documentId, text, email, fromId, toId, profileImageUrl: String
-    let timestamp: Timestamp
-    
-    init(documentId: String, data: [String: Any]) {
-        self.documentId = documentId
-        self.text = data["text"] as? String ?? ""
-        self.email = data["email"] as? String ?? ""
-        self.fromId = data["fromId"] as? String ?? ""
-        self.toId = data["toId"] as? String ?? ""
-        self.profileImageUrl = data["profile_image_url"] as? String ?? ""
-        self.timestamp = data["timestamp"] as? Timestamp ?? Timestamp(date: Date())
-    }
+    @DocumentID var id: String?
+    let text, email, fromId, toId, profileImageUrl: String
+    let timestamp: Date
 }
