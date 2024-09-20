@@ -60,17 +60,18 @@ extension ChatView {
     private var messagesView: some View {
         ScrollView {
             ScrollViewReader { scrollViewProxy in
-                ForEach(viewModel.chatMessages) { message in
-                    MessageView(message: message)
-                }
-                
-                HStack { Spacer() }
-                    .id(viewModel.emptyScrollToId)
-                    .onReceive(viewModel.$messageCount) { _ in
-                        withAnimation(.easeOut(duration: 0.5)) {
-                            scrollViewProxy.scrollTo(viewModel.emptyScrollToId, anchor: .bottom)
-                        }
+                VStack {
+                    ForEach(viewModel.chatMessages) { message in
+                        MessageView(message: message)
                     }
+                    HStack { Spacer() }
+                        .id(viewModel.emptyScrollToId)
+                }
+                .onReceive(viewModel.$messageCount) { _ in
+                    withAnimation(.easeOut(duration: 0.5)) {
+                        scrollViewProxy.scrollTo(viewModel.emptyScrollToId, anchor: .bottom)
+                    }
+                }
             }
         }
         .background(Color(.init(white: 0.95, alpha: 1)))

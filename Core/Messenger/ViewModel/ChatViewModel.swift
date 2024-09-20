@@ -64,6 +64,9 @@ final class ChatViewModel: ObservableObject {
                 return
             }
             print("Successfully saved current user sending message")
+            
+            self.persistRecentMessage()
+            
             self.chatText = ""
             self.messageCount += 1
         }
@@ -76,6 +79,27 @@ final class ChatViewModel: ObservableObject {
                 return
             }
             print("Recipient message successfully saved as well 🥳")
+        }
+    }
+    
+    private func persistRecentMessage() {
+        guard let chatUser = chatUser else { return }
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        guard let toId = self.chatUser?.uid else { return }
+        
+        let document = Firestore.firestore().collection("recent_messages").document(uid).collection("messages").document(toId)
+        
+        let data = [FirebaseConstants.timestamp: Timestamp(), FirebaseConstants.text: chatText, FirebaseConstants.fromId: uid, FirebaseConstants.toId: toId, FirebaseConstants.profileImageUrl: chatUser.profileImageUrl, FirebaseConstants.email: chatUser.email] as [String : Any]
+        
+        // Need to save another similiar dictionary for the recipient of this message here
+        
+        document.setData(data) { error in
+            if let error = error {
+                self.errorMessage = "Failed to save recent message: \(error)"
+                print("Failed to save recent message: \(error)")
+                return
+            }
         }
     }
 }

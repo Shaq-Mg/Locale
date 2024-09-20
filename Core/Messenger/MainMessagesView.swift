@@ -73,7 +73,7 @@ extension MainMessagesView {
     
     private var messagesScrollView: some View {
         ScrollView {
-            ForEach(0..<10, id: \.self) { i in
+            ForEach(mainMessagesVM.recentMessages) { recentMessage in
                 VStack {
                     NavigationLink {
                         ChatView(chatUser: chatUser)
@@ -90,16 +90,17 @@ extension MainMessagesView {
                                 ProgressView()
                             }
                             
-                            VStack(alignment: .leading) {
-                                Text("Username")
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text(recentMessage.email)
                                     .font(.system(size: 16, weight: .semibold))
                                 
-                                Text("Username")
+                                Text(recentMessage.text)
                                     .font(.system(size: 14))
                                     .foregroundStyle(Color(.systemGray))
+                                    .multilineTextAlignment(.leading)
                             }
                             Spacer()
-                            Text("22d")
+                            Text("\(recentMessage.timestamp)")
                                 .font(.system(size: 10))
                                 .foregroundStyle(.secondary)
                         }
