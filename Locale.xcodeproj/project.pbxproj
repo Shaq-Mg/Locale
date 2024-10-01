@@ -13,10 +13,17 @@
 		4605740B2C93113900C99EB0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4605740A2C93113900C99EB0 /* FirebaseStorage */; };
 		4605740E2C9313DB00C99EB0 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605740D2C9313DB00C99EB0 /* ChatUser.swift */; };
 		462E6D022C984956004DB1B2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E6D012C984956004DB1B2 /* ChatViewModel.swift */; };
+		463309872CAAD55A00546A1A /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463309862CAAD55A00546A1A /* MapViewRepresentable.swift */; };
+		463309892CAAD68D00546A1A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463309882CAAD68D00546A1A /* MapView.swift */; };
+		4633098C2CAAD6E400546A1A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4633098B2CAAD6E400546A1A /* LocationManager.swift */; };
 		464108D22C9ADFA800A0AE9E /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464108D12C9ADFA800A0AE9E /* ChatMessage.swift */; };
 		464108D42C9AE03B00A0AE9E /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464108D32C9AE03B00A0AE9E /* FirebaseConstants.swift */; };
 		464108D62C9AF61C00A0AE9E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464108D52C9AF61C00A0AE9E /* MessageView.swift */; };
 		4647133D2C94EFEC003FA828 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647133C2C94EFEC003FA828 /* RootView.swift */; };
+		465015342CAC06D80069C120 /* SearchDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465015332CAC06D80069C120 /* SearchDestinationView.swift */; };
+		465015372CAC0F6B0069C120 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465015362CAC0F6B0069C120 /* SearchBarView.swift */; };
+		4650153A2CAC1CF80069C120 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465015392CAC1CF80069C120 /* LocationSearchViewModel.swift */; };
+		4650153C2CAC1ED80069C120 /* DestinationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650153B2CAC1ED80069C120 /* DestinationSearchResultCell.swift */; };
 		4669908E2C9DDFD6007C71AF /* RecentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669908D2C9DDFD6007C71AF /* RecentMessage.swift */; };
 		46A40D5D2C88743F0033E6E3 /* LocaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A40D5C2C88743F0033E6E3 /* LocaleApp.swift */; };
 		46A40D612C8874400033E6E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A40D602C8874400033E6E3 /* Assets.xcassets */; };
@@ -58,10 +65,17 @@
 		460574022C9310D300C99EB0 /* MainMessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesViewModel.swift; sourceTree = "<group>"; };
 		4605740D2C9313DB00C99EB0 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		462E6D012C984956004DB1B2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		463309862CAAD55A00546A1A /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		463309882CAAD68D00546A1A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4633098B2CAAD6E400546A1A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		464108D12C9ADFA800A0AE9E /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		464108D32C9AE03B00A0AE9E /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		464108D52C9AF61C00A0AE9E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		4647133C2C94EFEC003FA828 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		465015332CAC06D80069C120 /* SearchDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDestinationView.swift; sourceTree = "<group>"; };
+		465015362CAC0F6B0069C120 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		465015392CAC1CF80069C120 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		4650153B2CAC1ED80069C120 /* DestinationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchResultCell.swift; sourceTree = "<group>"; };
 		4669908D2C9DDFD6007C71AF /* RecentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessage.swift; sourceTree = "<group>"; };
 		46A40D592C88743F0033E6E3 /* Locale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A40D5C2C88743F0033E6E3 /* LocaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleApp.swift; sourceTree = "<group>"; };
@@ -140,12 +154,49 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		463309852CAAD52400546A1A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				463309882CAAD68D00546A1A /* MapView.swift */,
+				463309862CAAD55A00546A1A /* MapViewRepresentable.swift */,
+				465015332CAC06D80069C120 /* SearchDestinationView.swift */,
+				4633098A2CAAD6CC00546A1A /* Manager */,
+				465015382CAC1CAA0069C120 /* ViewModel */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		4633098A2CAAD6CC00546A1A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4633098B2CAAD6E400546A1A /* LocationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		464108D72C9AF62500A0AE9E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4650153B2CAC1ED80069C120 /* DestinationSearchResultCell.swift */,
 				464108D52C9AF61C00A0AE9E /* MessageView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		465015352CAC0F5C0069C120 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				465015362CAC0F6B0069C120 /* SearchBarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		465015382CAC1CAA0069C120 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				465015392CAC1CF80069C120 /* LocationSearchViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		46A40D502C88743F0033E6E3 = {
@@ -214,6 +265,7 @@
 			children = (
 				46C186722C91B6ED00D07114 /* HomeView.swift */,
 				46F48D8B2C945F3400D45137 /* Authentication */,
+				463309852CAAD52400546A1A /* Map */,
 				46C1866F2C91ADA300D07114 /* Messenger */,
 			);
 			path = Core;
@@ -223,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				46F48D942C947C3D00D45137 /* InputView.swift */,
+				465015352CAC0F5C0069C120 /* Components */,
 				464108D72C9AF62500A0AE9E /* Cells */,
 			);
 			path = Subviews;
@@ -360,7 +413,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					46A40D582C88743F0033E6E3 = {
 						CreatedOnToolsVersion = 15.4;
@@ -430,19 +483,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465015342CAC06D80069C120 /* SearchDestinationView.swift in Sources */,
 				46C186732C91B6ED00D07114 /* HomeView.swift in Sources */,
 				464108D22C9ADFA800A0AE9E /* ChatMessage.swift in Sources */,
 				464108D42C9AE03B00A0AE9E /* FirebaseConstants.swift in Sources */,
+				465015372CAC0F6B0069C120 /* SearchBarView.swift in Sources */,
 				4669908E2C9DDFD6007C71AF /* RecentMessage.swift in Sources */,
 				46F48D912C94682C00D45137 /* LoginView.swift in Sources */,
+				4650153C2CAC1ED80069C120 /* DestinationSearchResultCell.swift in Sources */,
 				46FCFABC2C964114004B3B3A /* FirebaseService.swift in Sources */,
 				46CDF76D2C9753750059E5CC /* CreateNewMessageView.swift in Sources */,
+				463309892CAAD68D00546A1A /* MapView.swift in Sources */,
 				46CDF7712C97855A0059E5CC /* ChatView.swift in Sources */,
 				46C186712C91ADC300D07114 /* MainMessagesView.swift in Sources */,
 				46F48D8E2C945FFC00D45137 /* AuthViewModel.swift in Sources */,
+				463309872CAAD55A00546A1A /* MapViewRepresentable.swift in Sources */,
 				46CDF76F2C9755500059E5CC /* NewMessageViewModel.swift in Sources */,
 				4647133D2C94EFEC003FA828 /* RootView.swift in Sources */,
+				4633098C2CAAD6E400546A1A /* LocationManager.swift in Sources */,
 				46A40D5D2C88743F0033E6E3 /* LocaleApp.swift in Sources */,
+				4650153A2CAC1CF80069C120 /* LocationSearchViewModel.swift in Sources */,
 				464108D62C9AF61C00A0AE9E /* MessageView.swift in Sources */,
 				460574032C9310D300C99EB0 /* MainMessagesViewModel.swift in Sources */,
 				46F48D952C947C3D00D45137 /* InputView.swift in Sources */,
@@ -615,6 +675,7 @@
 				DEVELOPMENT_TEAM = X458CUZL7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location to find your nearby destinations ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -644,6 +705,7 @@
 				DEVELOPMENT_TEAM = X458CUZL7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location to find your nearby destinations ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -665,7 +727,6 @@
 		46A40D812C8874400033E6E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -685,7 +746,6 @@
 		46A40D822C8874400033E6E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -705,7 +765,6 @@
 		46A40D842C8874400033E6E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X458CUZL7L;
@@ -723,7 +782,6 @@
 		46A40D852C8874400033E6E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X458CUZL7L;

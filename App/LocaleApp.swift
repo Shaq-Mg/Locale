@@ -25,7 +25,7 @@ struct LocaleApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                RootView()
+                MapView()
                     .environmentObject(authVM)
                     .environmentObject(mainMessagesVM)
             }

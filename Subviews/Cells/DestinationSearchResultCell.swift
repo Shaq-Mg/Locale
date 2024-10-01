@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct DestinationSearchResultCell: View {
+    let title: String
+    let subtitle: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Image(systemName: "mappin.circle.fill")
+                    .foregroundStyle(Color(.systemBlue))
+                    .font(.system(size: 30))
+                
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(title)
+                        .font(.system(size: 16, weight: .semibold))
+                    Text(subtitle)
+                        .font(.system(size: 12))
+                        .foregroundStyle(.secondary)
+                }
+                Spacer()
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 4)
+            Divider()
+        }
     }
 }
 
 #Preview {
-    DestinationSearchResultCell()
+    DestinationSearchResultCell(title: "Mcdonalds", subtitle: "123 Broad Street")
 }

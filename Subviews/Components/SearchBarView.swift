@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct SearchBarView: View {
+    let placeholder: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .font(.system(size: 18, weight: .semibold))
+                .padding(.leading)
+            
+            Text(placeholder)
+                .font(.system(size: 18))
+                .foregroundStyle(.secondary)
+                .padding(.vertical)
+                .frame(height: 40)
+            Spacer()
+        }
+        .frame(maxWidth: .infinity)
+        .frame(width: 340)
+        .background(.white)
+        .cornerRadius(8)
+        .shadow(radius: 8)
     }
 }
 
 #Preview {
-    SearchBarView()
+    SearchBarView(placeholder: "Search...")
 }
