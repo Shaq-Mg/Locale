@@ -20,6 +20,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct LocaleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject private var authVM = AuthViewModel(service: FirebaseService())
+    @StateObject private var locationVM = LocationSearchViewModel()
     @StateObject private var mainMessagesVM = MainMessagesViewModel(service: FirebaseService())
     
     var body: some Scene {
@@ -27,6 +28,7 @@ struct LocaleApp: App {
             NavigationStack {
                 MapView()
                     .environmentObject(authVM)
+                    .environmentObject(locationVM)
                     .environmentObject(mainMessagesVM)
             }
         }
