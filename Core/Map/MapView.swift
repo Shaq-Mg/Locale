@@ -8,23 +8,41 @@
 import SwiftUI
 
 struct MapView: View {
-    @State private var showLocationSearchView = false
+    @EnvironmentObject var viewModel: LocationSearchViewModel
+    @State private var mapState = MapState.noInput
     
     var body: some View {
-        ZStack(alignment: .top) {
-            MapViewRepresentable()
-                .ignoresSafeArea()
-            
-            if showLocationSearchView {
-                SearchDestinationView(showLocationSearchView: $showLocationSearchView)
-            } else {
-                SearchBarView(placeholder: "Search destination...")
-                    .padding(.top, 64)
-                    .onTapGesture {
-                        withAnimation(.spring()) {
-                            showLocationSearchView.toggle()
+        ZStack(alignment: .bottom) {
+            ZStack(alignment: .top) {
+                MapViewRepresentable(mapState: $mapState)
+                    .ignoresSafeArea()
+                if mapState == .locationSelected {
+                    LocationBackButtonView(mapState: $mapState)
+                        .padding(.top, 24)
+                }
+                
+                if mapState == .searchingForLocation {
+                    SearchDestinationView(mapState: $mapState)
+                } else if mapState == .noInput {
+                    SearchBarView(placeholder: "Search destination...")
+                        .padding(.top, 64)
+                        .onTapGesture {
+                            withAnimation(.spring()) {
+                                mapState = .searchingForLocation
+                            }
                         }
-                    }
+                }
+            }
+            
+            if mapState == .locationSelected {
+                DestinationDetailView()
+                    .transition(.move(edge: .bottom))
+            }
+        }
+        .edgesIgnoringSafeArea(.bottom)
+        .onReceive(LocationManager.shared.$userLocation) { location in
+            if let location = location {
+                viewModel.userLocation = location
             }
         }
     }
@@ -32,4 +50,5 @@ struct MapView: View {
 
 #Preview {
     MapView()
+        .environmentObject(LocationSearchViewModel())
 }

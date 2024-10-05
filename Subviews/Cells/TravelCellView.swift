@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct TravelCellView: View {
+    let type: TravelType
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center, spacing: 12) {
+            Image(systemName: type.imageName)
+                .font(.system(size: 25))
+            Text(type.description)
+                .font(.system(size: 14, weight: .semibold))
+        }
+        .frame(width: UIScreen.main.bounds.width / 3 - 20, height: 90)
     }
 }
 
 #Preview {
-    TravelCellView()
+    TravelCellView(type: .cycle)
 }

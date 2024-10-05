@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct LocationBackButtonView: View {
+    @Binding var mapState: MapState
+    @EnvironmentObject var viewModel: LocationSearchViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Button {
+                viewModel.queryFragment = ""
+                mapState = .noInput
+                viewModel.selectedLocation = nil
+            } label: {
+                Image(systemName: "arrow.left")
+                    .foregroundStyle(.black)
+                    .font(.system(size: 25))
+                    .padding(14)
+                    .background(Circle().foregroundStyle(.white))
+                    .shadow(radius: 8)
+            }
+        }
+        .padding(.horizontal)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
 #Preview {
-    LocationBackButtonView()
+    LocationBackButtonView(mapState: .constant(.locationSelected))
+        .environmentObject(LocationSearchViewModel())
 }

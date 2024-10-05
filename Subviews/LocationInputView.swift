@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct LocationInputView: View {
+    let text: String
+    let fontSize: CGFloat
+    let color: Color
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(text)
+            .font(.system(size: fontSize, weight: .semibold))
+            .foregroundStyle(color)
     }
 }
 
 #Preview {
-    LocationInputView()
+    LocationInputView(text: "Current location", fontSize: 12, color: .secondary)
 }

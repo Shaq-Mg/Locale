@@ -12,6 +12,8 @@
 		460574092C93112A00C99EB0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 460574082C93112A00C99EB0 /* FirebaseFirestore */; };
 		4605740B2C93113900C99EB0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4605740A2C93113900C99EB0 /* FirebaseStorage */; };
 		4605740E2C9313DB00C99EB0 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605740D2C9313DB00C99EB0 /* ChatUser.swift */; };
+		460F39E62CB171D000571F5F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F39E52CB171D000571F5F /* Double.swift */; };
+		460F39E82CB18C5700571F5F /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F39E72CB18C5700571F5F /* Destination.swift */; };
 		462E6D022C984956004DB1B2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E6D012C984956004DB1B2 /* ChatViewModel.swift */; };
 		463309872CAAD55A00546A1A /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463309862CAAD55A00546A1A /* MapViewRepresentable.swift */; };
 		463309892CAAD68D00546A1A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463309882CAAD68D00546A1A /* MapView.swift */; };
@@ -20,11 +22,17 @@
 		464108D42C9AE03B00A0AE9E /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464108D32C9AE03B00A0AE9E /* FirebaseConstants.swift */; };
 		464108D62C9AF61C00A0AE9E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464108D52C9AF61C00A0AE9E /* MessageView.swift */; };
 		4647133D2C94EFEC003FA828 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647133C2C94EFEC003FA828 /* RootView.swift */; };
+		464D3C112CB01973000FEAA1 /* LocationBackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D3C102CB01973000FEAA1 /* LocationBackButtonView.swift */; };
+		464D3C152CB01C2A000FEAA1 /* TravelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D3C142CB01C2A000FEAA1 /* TravelType.swift */; };
 		465015342CAC06D80069C120 /* SearchDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465015332CAC06D80069C120 /* SearchDestinationView.swift */; };
 		465015372CAC0F6B0069C120 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465015362CAC0F6B0069C120 /* SearchBarView.swift */; };
 		4650153A2CAC1CF80069C120 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465015392CAC1CF80069C120 /* LocationSearchViewModel.swift */; };
 		4650153C2CAC1ED80069C120 /* DestinationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650153B2CAC1ED80069C120 /* DestinationSearchResultCell.swift */; };
+		46621FB22CAEC316001FCDF9 /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46621FB12CAEC316001FCDF9 /* MapState.swift */; };
 		4669908E2C9DDFD6007C71AF /* RecentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669908D2C9DDFD6007C71AF /* RecentMessage.swift */; };
+		469D8AA92CB01CEB00E03682 /* DestinationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469D8AA82CB01CEB00E03682 /* DestinationDetailView.swift */; };
+		469D8AAD2CB01D4800E03682 /* TravelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469D8AAC2CB01D4800E03682 /* TravelCellView.swift */; };
+		469D8AAF2CB01F0800E03682 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469D8AAE2CB01F0800E03682 /* LocationInputView.swift */; };
 		46A40D5D2C88743F0033E6E3 /* LocaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A40D5C2C88743F0033E6E3 /* LocaleApp.swift */; };
 		46A40D612C8874400033E6E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A40D602C8874400033E6E3 /* Assets.xcassets */; };
 		46A40D642C8874400033E6E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A40D632C8874400033E6E3 /* Preview Assets.xcassets */; };
@@ -64,6 +72,8 @@
 /* Begin PBXFileReference section */
 		460574022C9310D300C99EB0 /* MainMessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesViewModel.swift; sourceTree = "<group>"; };
 		4605740D2C9313DB00C99EB0 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		460F39E52CB171D000571F5F /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		460F39E72CB18C5700571F5F /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		462E6D012C984956004DB1B2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		463309862CAAD55A00546A1A /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		463309882CAAD68D00546A1A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -72,11 +82,17 @@
 		464108D32C9AE03B00A0AE9E /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		464108D52C9AF61C00A0AE9E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		4647133C2C94EFEC003FA828 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		464D3C102CB01973000FEAA1 /* LocationBackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationBackButtonView.swift; sourceTree = "<group>"; };
+		464D3C142CB01C2A000FEAA1 /* TravelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelType.swift; sourceTree = "<group>"; };
 		465015332CAC06D80069C120 /* SearchDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDestinationView.swift; sourceTree = "<group>"; };
 		465015362CAC0F6B0069C120 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		465015392CAC1CF80069C120 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		4650153B2CAC1ED80069C120 /* DestinationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchResultCell.swift; sourceTree = "<group>"; };
+		46621FB12CAEC316001FCDF9 /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
 		4669908D2C9DDFD6007C71AF /* RecentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessage.swift; sourceTree = "<group>"; };
+		469D8AA82CB01CEB00E03682 /* DestinationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationDetailView.swift; sourceTree = "<group>"; };
+		469D8AAC2CB01D4800E03682 /* TravelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCellView.swift; sourceTree = "<group>"; };
+		469D8AAE2CB01F0800E03682 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		46A40D592C88743F0033E6E3 /* Locale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A40D5C2C88743F0033E6E3 /* LocaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleApp.swift; sourceTree = "<group>"; };
 		46A40D602C8874400033E6E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -157,6 +173,7 @@
 		463309852CAAD52400546A1A /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				469D8AA82CB01CEB00E03682 /* DestinationDetailView.swift */,
 				463309882CAAD68D00546A1A /* MapView.swift */,
 				463309862CAAD55A00546A1A /* MapViewRepresentable.swift */,
 				465015332CAC06D80069C120 /* SearchDestinationView.swift */,
@@ -179,8 +196,17 @@
 			children = (
 				4650153B2CAC1ED80069C120 /* DestinationSearchResultCell.swift */,
 				464108D52C9AF61C00A0AE9E /* MessageView.swift */,
+				469D8AAC2CB01D4800E03682 /* TravelCellView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		464D3C0F2CB0194A000FEAA1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				464D3C102CB01973000FEAA1 /* LocationBackButtonView.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		465015352CAC0F5C0069C120 /* Components */ = {
@@ -197,6 +223,16 @@
 				465015392CAC1CF80069C120 /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		46621FB02CAEC305001FCDF9 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				460F39E72CB18C5700571F5F /* Destination.swift */,
+				46621FB12CAEC316001FCDF9 /* MapState.swift */,
+				464D3C142CB01C2A000FEAA1 /* TravelType.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		46A40D502C88743F0033E6E3 = {
@@ -275,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				46F48D942C947C3D00D45137 /* InputView.swift */,
+				469D8AAE2CB01F0800E03682 /* LocationInputView.swift */,
+				464D3C0F2CB0194A000FEAA1 /* Buttons */,
 				465015352CAC0F5C0069C120 /* Components */,
 				464108D72C9AF62500A0AE9E /* Cells */,
 			);
@@ -284,6 +322,7 @@
 		46A40D882C8874640033E6E3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				46621FB02CAEC305001FCDF9 /* Map */,
 				4605740C2C9313CC00C99EB0 /* Chat */,
 			);
 			path = Models;
@@ -301,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				464108D32C9AE03B00A0AE9E /* FirebaseConstants.swift */,
+				460F39E52CB171D000571F5F /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -492,22 +532,30 @@
 				46F48D912C94682C00D45137 /* LoginView.swift in Sources */,
 				4650153C2CAC1ED80069C120 /* DestinationSearchResultCell.swift in Sources */,
 				46FCFABC2C964114004B3B3A /* FirebaseService.swift in Sources */,
+				46621FB22CAEC316001FCDF9 /* MapState.swift in Sources */,
+				464D3C152CB01C2A000FEAA1 /* TravelType.swift in Sources */,
 				46CDF76D2C9753750059E5CC /* CreateNewMessageView.swift in Sources */,
 				463309892CAAD68D00546A1A /* MapView.swift in Sources */,
+				464D3C112CB01973000FEAA1 /* LocationBackButtonView.swift in Sources */,
 				46CDF7712C97855A0059E5CC /* ChatView.swift in Sources */,
+				469D8AAD2CB01D4800E03682 /* TravelCellView.swift in Sources */,
 				46C186712C91ADC300D07114 /* MainMessagesView.swift in Sources */,
 				46F48D8E2C945FFC00D45137 /* AuthViewModel.swift in Sources */,
 				463309872CAAD55A00546A1A /* MapViewRepresentable.swift in Sources */,
 				46CDF76F2C9755500059E5CC /* NewMessageViewModel.swift in Sources */,
 				4647133D2C94EFEC003FA828 /* RootView.swift in Sources */,
 				4633098C2CAAD6E400546A1A /* LocationManager.swift in Sources */,
+				460F39E82CB18C5700571F5F /* Destination.swift in Sources */,
+				469D8AAF2CB01F0800E03682 /* LocationInputView.swift in Sources */,
 				46A40D5D2C88743F0033E6E3 /* LocaleApp.swift in Sources */,
 				4650153A2CAC1CF80069C120 /* LocationSearchViewModel.swift in Sources */,
 				464108D62C9AF61C00A0AE9E /* MessageView.swift in Sources */,
+				469D8AA92CB01CEB00E03682 /* DestinationDetailView.swift in Sources */,
 				460574032C9310D300C99EB0 /* MainMessagesViewModel.swift in Sources */,
 				46F48D952C947C3D00D45137 /* InputView.swift in Sources */,
 				46F48D932C94684100D45137 /* CreateAccountView.swift in Sources */,
 				462E6D022C984956004DB1B2 /* ChatViewModel.swift in Sources */,
+				460F39E62CB171D000571F5F /* Double.swift in Sources */,
 				4605740E2C9313DB00C99EB0 /* ChatUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

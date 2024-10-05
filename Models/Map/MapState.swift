@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum MapState {
+    case noInput
+    case searchingForLocation
+    case locationSelected
+}

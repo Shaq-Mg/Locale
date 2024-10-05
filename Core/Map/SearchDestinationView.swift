@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct SearchDestinationView: View {
-    @Binding var showLocationSearchView: Bool
+    @Binding var mapState: MapState
     @EnvironmentObject private var locationViewModel: LocationSearchViewModel
     
     var body: some View {
         VStack {
-            VStack {
-                searchField
-                    .padding(.top, 36)
-                Divider()
-                    .padding(.vertical, 10)
+            searchField
+                .padding(.top, 36)
+            Divider()
+                .padding(.vertical, 10)
+            
+            HStack {
+                Text(locationViewModel.queryFragment.isEmpty ? "Recent" : "Results")
+                    .foregroundStyle(.secondary)
+                Spacer()
+                Image(systemName: locationViewModel.queryFragment.isEmpty ? "info.circle.fill" : "chevron.down")
             }
             .font(.system(size: 16))
             
@@ -27,7 +32,7 @@ struct SearchDestinationView: View {
                         .onTapGesture {
                             withAnimation(.spring()) {
                                 locationViewModel.selectLocation(result)
-                                showLocationSearchView.toggle()
+                                mapState = .locationSelected
                             }
                         }
                 }
@@ -40,7 +45,7 @@ struct SearchDestinationView: View {
 }
 
 #Preview {
-    SearchDestinationView(showLocationSearchView: .constant(true))
+    SearchDestinationView(mapState: .constant(.searchingForLocation))
         .environmentObject(LocationSearchViewModel())
 }
 
@@ -61,7 +66,8 @@ extension SearchDestinationView {
             .foregroundStyle(.secondary)
             .background(.white)
             Button("Cancel") {
-                showLocationSearchView.toggle()
+                locationViewModel.queryFragment = ""
+                mapState = .noInput
             }
             .font(.system(size: 16, weight: .bold))
             .foregroundStyle(.secondary)
