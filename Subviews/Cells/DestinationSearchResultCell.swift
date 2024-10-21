@@ -15,7 +15,7 @@ struct DestinationSearchResultCell: View {
         VStack {
             HStack {
                 Image(systemName: "mappin.circle.fill")
-                    .foregroundStyle(Color(.systemBlue))
+                    .foregroundStyle(Color(.systemMint))
                     .font(.system(size: 30))
                 
                 VStack(alignment: .leading, spacing: 4) {

@@ -53,11 +53,11 @@ struct DestinationDetailView: View {
             Button("Confirm") {
                 
             }
-            .font(.system(size: 18, weight: .bold))
+            .font(.system(size: 18, weight: .semibold))
             .foregroundStyle(.white)
             .padding()
             .frame(maxWidth: .infinity)
-            .background(.blue)
+            .background(.mint)
             .cornerRadius(8)
             .shadow(radius: 8)
             .padding(.top, 64)
@@ -82,7 +82,7 @@ extension DestinationDetailView {
                 VStack {
                     TravelCellView(type: type)
                         .foregroundStyle(type == selectedTravelType ? .white : .black)
-                        .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color(type == selectedTravelType ? .systemBlue : .systemGroupedBackground)))
+                        .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color(type == selectedTravelType ? .systemMint : .systemGroupedBackground)))
                         .onTapGesture {
                             withAnimation(.spring()) {
                                 selectedTravelType = type

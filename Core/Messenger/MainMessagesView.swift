@@ -10,6 +10,7 @@ import SwiftUI
 struct MainMessagesView: View {
     @EnvironmentObject var mainMessagesVM: MainMessagesViewModel
     @State private var chatUser: ChatUser?
+    @Binding var isMenuShowing: Bool
     
     var body: some View {
         VStack {
@@ -21,6 +22,7 @@ struct MainMessagesView: View {
         .overlay(alignment: .bottomTrailing) {
             Button("+ New message") {
                 mainMessagesVM.showNewMessageScreen.toggle()
+                isMenuShowing = false
             }
             .font(.system(size: 16, weight: .bold))
             .foregroundStyle(.mint)
@@ -40,7 +42,7 @@ struct MainMessagesView: View {
 
 #Preview {
     NavigationStack {
-        MainMessagesView()
+        MainMessagesView(isMenuShowing: .constant(false))
             .environmentObject(MainMessagesViewModel(service: FirebaseService()))
     }
 }
@@ -62,9 +64,17 @@ extension MainMessagesView {
             VStack(alignment: .leading, spacing: 4) {
                 let email = mainMessagesVM.chatUser?.email.replacingOccurrences(of: "@gmail.com", with: "")
                 Text(email ?? "email")
-                    .font(.system(size: 18, weight: .bold))
+                    .font(.system(size: 20, weight: .bold))
             }
             Spacer()
+            
+            Image(systemName: "line.3.horizontal")
+                .font(.system(size: 18, weight: .semibold))
+                .onTapGesture {
+                    withAnimation(.easeInOut) {
+                        isMenuShowing.toggle()
+                    }
+                }
         }
         .padding(8)
         .padding(.leading)

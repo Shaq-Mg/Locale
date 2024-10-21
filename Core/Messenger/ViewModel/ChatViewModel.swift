@@ -28,7 +28,7 @@ final class ChatViewModel: ObservableObject {
         guard let fromId = Auth.auth().currentUser?.uid else { return }
         
         guard let toId = chatUser?.uid else { return }
-        Firestore.firestore().collection("messages").document(fromId).collection(toId).order(by: "timestamp").addSnapshotListener { querySnapshot, error in
+        Firestore.firestore().collection("users").document(fromId).collection("messages").document(fromId).collection(toId).order(by: "timestamp").addSnapshotListener { querySnapshot, error in
             if let error = error {
                 self.errorMessage = "Failed to listen for messages: \(error)"
                 print(error)
@@ -54,7 +54,7 @@ final class ChatViewModel: ObservableObject {
         
         guard let toId = chatUser?.uid else { return }
         
-        let document = Firestore.firestore().collection("messages").document(fromId).collection(toId).document()
+        let document = Firestore.firestore().collection("users").document(fromId).collection("messages").document(fromId).collection(toId).document()
         
         let messageData = [FirebaseConstants.fromId: fromId, FirebaseConstants.toId: toId, FirebaseConstants.text: chatText, "timestamp": Timestamp()] as [String : Any]
         

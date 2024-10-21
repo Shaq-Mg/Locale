@@ -10,12 +10,14 @@ import SwiftUI
 struct MapView: View {
     @EnvironmentObject var viewModel: LocationSearchViewModel
     @State private var mapState = MapState.noInput
+    @Binding var isMenuShowing: Bool
     
     var body: some View {
         ZStack(alignment: .bottom) {
             ZStack(alignment: .top) {
                 MapViewRepresentable(mapState: $mapState)
                     .ignoresSafeArea()
+
                 if mapState == .locationSelected {
                     LocationBackButtonView(mapState: $mapState)
                         .padding(.top, 24)
@@ -24,11 +26,13 @@ struct MapView: View {
                 if mapState == .searchingForLocation {
                     SearchDestinationView(mapState: $mapState)
                 } else if mapState == .noInput {
+                    ShowMenuButtonView(isMenuShowing: $isMenuShowing)
                     SearchBarView(placeholder: "Search destination...")
                         .padding(.top, 64)
                         .onTapGesture {
                             withAnimation(.spring()) {
                                 mapState = .searchingForLocation
+                                isMenuShowing = false
                             }
                         }
                 }
@@ -49,6 +53,6 @@ struct MapView: View {
 }
 
 #Preview {
-    MapView()
+    MapView(isMenuShowing: .constant(false))
         .environmentObject(LocationSearchViewModel())
 }

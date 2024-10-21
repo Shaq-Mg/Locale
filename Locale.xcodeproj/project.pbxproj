@@ -14,6 +14,9 @@
 		4605740E2C9313DB00C99EB0 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605740D2C9313DB00C99EB0 /* ChatUser.swift */; };
 		460F39E62CB171D000571F5F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F39E52CB171D000571F5F /* Double.swift */; };
 		460F39E82CB18C5700571F5F /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F39E72CB18C5700571F5F /* Destination.swift */; };
+		461B260F2CC5770000A8C1C5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B260E2CC5770000A8C1C5 /* SettingsView.swift */; };
+		4625D7BF2CC2E073006038CB /* TabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4625D7BE2CC2E073006038CB /* TabState.swift */; };
+		4625D7C12CC2E2C3006038CB /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4625D7C02CC2E2C3006038CB /* CustomTabView.swift */; };
 		462E6D022C984956004DB1B2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E6D012C984956004DB1B2 /* ChatViewModel.swift */; };
 		463309872CAAD55A00546A1A /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463309862CAAD55A00546A1A /* MapViewRepresentable.swift */; };
 		463309892CAAD68D00546A1A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463309882CAAD68D00546A1A /* MapView.swift */; };
@@ -44,6 +47,7 @@
 		46CDF76D2C9753750059E5CC /* CreateNewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDF76C2C9753750059E5CC /* CreateNewMessageView.swift */; };
 		46CDF76F2C9755500059E5CC /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDF76E2C9755500059E5CC /* NewMessageViewModel.swift */; };
 		46CDF7712C97855A0059E5CC /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDF7702C97855A0059E5CC /* ChatView.swift */; };
+		46EB6F472CC3E51500ABCA13 /* ShowMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB6F462CC3E51500ABCA13 /* ShowMenuButtonView.swift */; };
 		46F48D8A2C944C6E00D45137 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46F48D892C944C6E00D45137 /* GoogleService-Info.plist */; };
 		46F48D8E2C945FFC00D45137 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F48D8D2C945FFC00D45137 /* AuthViewModel.swift */; };
 		46F48D912C94682C00D45137 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F48D902C94682C00D45137 /* LoginView.swift */; };
@@ -74,6 +78,9 @@
 		4605740D2C9313DB00C99EB0 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		460F39E52CB171D000571F5F /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		460F39E72CB18C5700571F5F /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		461B260E2CC5770000A8C1C5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4625D7BE2CC2E073006038CB /* TabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabState.swift; sourceTree = "<group>"; };
+		4625D7C02CC2E2C3006038CB /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		462E6D012C984956004DB1B2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		463309862CAAD55A00546A1A /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		463309882CAAD68D00546A1A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -107,6 +114,7 @@
 		46CDF76C2C9753750059E5CC /* CreateNewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewMessageView.swift; sourceTree = "<group>"; };
 		46CDF76E2C9755500059E5CC /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		46CDF7702C97855A0059E5CC /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		46EB6F462CC3E51500ABCA13 /* ShowMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMenuButtonView.swift; sourceTree = "<group>"; };
 		46F48D892C944C6E00D45137 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46F48D8D2C945FFC00D45137 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		46F48D902C94682C00D45137 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -170,6 +178,14 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		4625D7BD2CC2E03C006038CB /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				4625D7BE2CC2E073006038CB /* TabState.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		463309852CAAD52400546A1A /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				464D3C102CB01973000FEAA1 /* LocationBackButtonView.swift */,
+				46EB6F462CC3E51500ABCA13 /* ShowMenuButtonView.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -213,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				465015362CAC0F6B0069C120 /* SearchBarView.swift */,
+				4625D7C02CC2E2C3006038CB /* CustomTabView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -322,8 +340,9 @@
 		46A40D882C8874640033E6E3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				46621FB02CAEC305001FCDF9 /* Map */,
 				4605740C2C9313CC00C99EB0 /* Chat */,
+				46621FB02CAEC305001FCDF9 /* Map */,
+				4625D7BD2CC2E03C006038CB /* Tab */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,6 +390,7 @@
 				46F48D922C94684100D45137 /* CreateAccountView.swift */,
 				46F48D902C94682C00D45137 /* LoginView.swift */,
 				4647133C2C94EFEC003FA828 /* RootView.swift */,
+				461B260E2CC5770000A8C1C5 /* SettingsView.swift */,
 				46F48D8F2C9467E800D45137 /* ViewModel */,
 			);
 			path = Authentication;
@@ -530,13 +550,16 @@
 				465015372CAC0F6B0069C120 /* SearchBarView.swift in Sources */,
 				4669908E2C9DDFD6007C71AF /* RecentMessage.swift in Sources */,
 				46F48D912C94682C00D45137 /* LoginView.swift in Sources */,
+				4625D7BF2CC2E073006038CB /* TabState.swift in Sources */,
 				4650153C2CAC1ED80069C120 /* DestinationSearchResultCell.swift in Sources */,
 				46FCFABC2C964114004B3B3A /* FirebaseService.swift in Sources */,
 				46621FB22CAEC316001FCDF9 /* MapState.swift in Sources */,
+				46EB6F472CC3E51500ABCA13 /* ShowMenuButtonView.swift in Sources */,
 				464D3C152CB01C2A000FEAA1 /* TravelType.swift in Sources */,
 				46CDF76D2C9753750059E5CC /* CreateNewMessageView.swift in Sources */,
 				463309892CAAD68D00546A1A /* MapView.swift in Sources */,
 				464D3C112CB01973000FEAA1 /* LocationBackButtonView.swift in Sources */,
+				4625D7C12CC2E2C3006038CB /* CustomTabView.swift in Sources */,
 				46CDF7712C97855A0059E5CC /* ChatView.swift in Sources */,
 				469D8AAD2CB01D4800E03682 /* TravelCellView.swift in Sources */,
 				46C186712C91ADC300D07114 /* MainMessagesView.swift in Sources */,
@@ -557,6 +580,7 @@
 				462E6D022C984956004DB1B2 /* ChatViewModel.swift in Sources */,
 				460F39E62CB171D000571F5F /* Double.swift in Sources */,
 				4605740E2C9313DB00C99EB0 /* ChatUser.swift in Sources */,
+				461B260F2CC5770000A8C1C5 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

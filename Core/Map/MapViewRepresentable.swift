@@ -74,8 +74,8 @@ extension MapViewRepresentable {
         
         func mapView(_ mapView: MKMapView, rendererFor overlay: any MKOverlay) -> MKOverlayRenderer {
             let polyline = MKPolylineRenderer(overlay: overlay)
-            polyline.strokeColor = .systemBlue
-            polyline.lineWidth = 4
+            polyline.strokeColor = .systemMint
+            polyline.lineWidth = 6
             return polyline
         }
         

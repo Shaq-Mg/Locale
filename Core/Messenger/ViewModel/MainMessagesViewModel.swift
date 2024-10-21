@@ -31,7 +31,7 @@ final class MainMessagesViewModel: ObservableObject {
     private func fetchRecentMessages() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        Firestore.firestore().collection("recent_messages").document(uid).collection("messages").order(by: "timestamp").addSnapshotListener { querySnapshot, error in
+        Firestore.firestore().collection("users").document(uid).collection("recent_messages").document(uid).collection("messages").order(by: "timestamp").addSnapshotListener { querySnapshot, error in
             if let error = error {
                 self.errorMessage = "Failed to listen for recent message: \(error)"
                 print(error)

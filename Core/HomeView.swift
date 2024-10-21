@@ -8,14 +8,38 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject private var authViewModel: AuthViewModel
+    @EnvironmentObject private var authVM: AuthViewModel
+    @EnvironmentObject private var mainMessagesVM: MainMessagesViewModel
+    @EnvironmentObject private var locationVM: LocationSearchViewModel
+    @State private var selectedTab: TabState = .messages
+    @State private var showMenu = false
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
     
     var body: some View {
-        Button(action: {
-            try? authViewModel.signOut()
-        }, label: {
-            Image(systemName: "gear")
-        })
+        ZStack {
+            if selectedTab == .messages {
+                MainMessagesView(isMenuShowing: $showMenu)
+                    .environmentObject(mainMessagesVM)
+            } else if selectedTab == .map {
+                MapView(isMenuShowing: $showMenu)
+                    .environmentObject(locationVM)
+            } else if selectedTab == .settings {
+                NavigationStack {
+                    SettingsView(isMenuShowing: $showMenu)
+                }
+            }
+            
+            if showMenu {
+                VStack {
+                    Spacer()
+                    CustomTabView(selectedTab: $selectedTab, isMenuShowing: $showMenu)
+                }
+            }
+        }
+        .onAppear(perform: authVM.service.fetchCurrentUser)
     }
 }
 
@@ -23,5 +47,7 @@ struct HomeView: View {
     NavigationStack {
         HomeView()
             .environmentObject(AuthViewModel(service: FirebaseService()))
+            .environmentObject(MainMessagesViewModel(service: FirebaseService()))
+            .environmentObject(LocationSearchViewModel())
     }
 }

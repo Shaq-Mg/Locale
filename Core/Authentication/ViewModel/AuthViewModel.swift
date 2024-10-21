@@ -28,6 +28,7 @@ final class AuthViewModel: ObservableObject {
         DispatchQueue.main.async {
             self.isUserCurrrentlyLoggedOut = Auth.auth().currentUser?.uid == nil
         }
+        service.fetchCurrentUser()
     }
     
     func clearLoginInformation() {
@@ -35,6 +36,8 @@ final class AuthViewModel: ObservableObject {
         password = ""
         confirmPassword = ""
         errorMessage = ""
+        selectedItem = nil
+        selectedImageData = nil
     }
     
     func signIn() {

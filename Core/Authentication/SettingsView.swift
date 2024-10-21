@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject private var authVM: AuthViewModel
+    @Binding var isMenuShowing: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Section("Account") {
+                Button("Sign out") {
+                    try? authVM.signOut()
+                }
+                .font(.headline)
+                .foregroundStyle(.mint)
+            }
+        }
+        .navigationTitle("Settings")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                ShowMenuButtonView(isMenuShowing: $isMenuShowing)
+            }
+        }
     }
 }
 
 #Preview {
-    SettingsView()
+    NavigationStack {
+        SettingsView(isMenuShowing: .constant(false))
+            .environmentObject(AuthViewModel(service: FirebaseService()))
+    }
 }
