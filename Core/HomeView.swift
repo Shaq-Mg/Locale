@@ -46,8 +46,8 @@ struct HomeView: View {
 #Preview {
     NavigationStack {
         HomeView()
-            .environmentObject(AuthViewModel(service: FirebaseService()))
-            .environmentObject(MainMessagesViewModel(service: FirebaseService()))
+            .environmentObject(AuthViewModel())
+            .environmentObject(MainMessagesViewModel())
             .environmentObject(LocationSearchViewModel())
     }
 }

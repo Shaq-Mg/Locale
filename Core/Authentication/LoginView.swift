@@ -52,6 +52,6 @@ struct LoginView: View {
 #Preview {
     NavigationStack {
         LoginView()
-            .environmentObject(AuthViewModel(service: FirebaseService()))
+            .environmentObject(AuthViewModel())
     }
 }

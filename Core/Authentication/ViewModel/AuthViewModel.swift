@@ -21,14 +21,12 @@ final class AuthViewModel: ObservableObject {
     @Published var password = ""
     @Published var confirmPassword = ""
     
-    let service: FirebaseService
+    let service = FirebaseService.shared
     
-    init(service: FirebaseService) {
-        self.service = service
+    init() {
         DispatchQueue.main.async {
             self.isUserCurrrentlyLoggedOut = Auth.auth().currentUser?.uid == nil
         }
-        service.fetchCurrentUser()
     }
     
     func clearLoginInformation() {

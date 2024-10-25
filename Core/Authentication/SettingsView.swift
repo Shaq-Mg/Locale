@@ -33,6 +33,6 @@ struct SettingsView: View {
 #Preview {
     NavigationStack {
         SettingsView(isMenuShowing: .constant(false))
-            .environmentObject(AuthViewModel(service: FirebaseService()))
+            .environmentObject(AuthViewModel())
     }
 }

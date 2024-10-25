@@ -19,9 +19,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct LocaleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject private var authVM = AuthViewModel(service: FirebaseService())
+    @StateObject private var authVM = AuthViewModel()
     @StateObject private var locationVM = LocationSearchViewModel()
-    @StateObject private var mainMessagesVM = MainMessagesViewModel(service: FirebaseService())
+    @StateObject private var mainMessagesVM = MainMessagesViewModel()
     
     var body: some Scene {
         WindowGroup {

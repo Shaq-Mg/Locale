@@ -14,6 +14,10 @@ final class FirebaseService {
     @Published var errorMessage = ""
     @Published var chatUser: ChatUser?
     
+    static let shared = FirebaseService()
+    
+    private init() { }
+    
     func fetchCurrentUser() {
         guard let uid = Auth.auth().currentUser?.uid else {
             self.errorMessage = "Could not find firebase uid"

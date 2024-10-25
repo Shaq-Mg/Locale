@@ -62,7 +62,7 @@ struct CreateAccountView: View {
 #Preview {
     NavigationStack {
         CreateAccountView()
-            .environmentObject(AuthViewModel(service: FirebaseService()))
+            .environmentObject(AuthViewModel())
     }
 }
 

@@ -24,6 +24,6 @@ struct RootView: View {
 #Preview {
     NavigationStack {
         RootView()
-            .environmentObject(AuthViewModel(service: FirebaseService()))
+            .environmentObject(AuthViewModel())
     }
 }

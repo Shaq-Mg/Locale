@@ -16,10 +16,9 @@ final class MainMessagesViewModel: ObservableObject {
     @Published var chatUser: ChatUser?
     @Published var recentMessages = [RecentMessage]()
     
-    let service: FirebaseService
+    let service = FirebaseService.shared
     
-    init(service: FirebaseService) {
-        self.service = service
+    init() {
         DispatchQueue.main.async {
             self.isUserCurrrentlyLoggedOut = Auth.auth().currentUser?.uid == nil
         }

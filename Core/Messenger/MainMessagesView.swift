@@ -43,7 +43,7 @@ struct MainMessagesView: View {
 #Preview {
     NavigationStack {
         MainMessagesView(isMenuShowing: .constant(false))
-            .environmentObject(MainMessagesViewModel(service: FirebaseService()))
+            .environmentObject(MainMessagesViewModel())
     }
 }
 extension MainMessagesView {
