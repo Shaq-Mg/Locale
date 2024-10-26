@@ -39,7 +39,6 @@ struct HomeView: View {
                 }
             }
         }
-        .onAppear(perform: authVM.service.fetchCurrentUser)
     }
 }
 

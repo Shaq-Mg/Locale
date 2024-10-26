@@ -12,6 +12,7 @@ import FirebaseStorage
 import PhotosUI
 
 final class AuthViewModel: ObservableObject {
+    @Published var chatUser: ChatUser? = nil
     @Published var selectedItem: PhotosPickerItem? = nil
     @Published var selectedImageData: Data? = nil
     
@@ -24,6 +25,7 @@ final class AuthViewModel: ObservableObject {
     let service = FirebaseService.shared
     
     init() {
+        service.fetchCurrentUser()
         DispatchQueue.main.async {
             self.isUserCurrrentlyLoggedOut = Auth.auth().currentUser?.uid == nil
         }
@@ -62,9 +64,9 @@ final class AuthViewModel: ObservableObject {
                 self.errorMessage = "Failed to create user: \(error)"
                 return
             }
-            
             print("Successfully created user \(result?.user.uid ?? "")")
             self.errorMessage = "Successfully created user \(result?.user.uid ?? "")"
+            self.service.createAccount()
             self.persistImageToStorage()
             self.isUserCurrrentlyLoggedOut = false
         }

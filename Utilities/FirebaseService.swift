@@ -39,4 +39,15 @@ final class FirebaseService {
             self.chatUser = .init(data: data)
         }
     }
+    
+    func createAccount() {
+        guard let user = chatUser else { return }
+        let userData: [String:Any] = [
+            FirebaseConstants.uid : user.uid,
+            FirebaseConstants.email :  user.email,
+            FirebaseConstants.profileImageUrl : user.profileImageUrl
+        ]
+        
+        Firestore.firestore().collection("users").document(user.uid).setData(userData, merge: false)
+    }
 }

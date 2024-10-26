@@ -27,9 +27,6 @@ struct MainMessagesView: View {
             .font(.system(size: 16, weight: .bold))
             .foregroundStyle(.mint)
             .padding()
-            .onAppear {
-                mainMessagesVM.service.fetchCurrentUser()
-            }
             .fullScreenCover(isPresented: $mainMessagesVM.showNewMessageScreen) {
                 CreateNewMessageView(didSelectNewUser: { user in
                     print(user.email)
