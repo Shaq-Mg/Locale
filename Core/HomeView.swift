@@ -29,6 +29,7 @@ struct HomeView: View {
             } else if selectedTab == .settings {
                 NavigationStack {
                     SettingsView(isMenuShowing: $showMenu)
+                        .environmentObject(authVM)
                 }
             }
             
